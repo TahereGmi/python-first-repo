@@ -9,3 +9,8 @@ print(course_name[0])
 print(course_name[:])
 print(course_name[-1:])
 print(len(course_name))
+
+first = "Tahereh"
+last = "Gholami"
+full = f"{len(first)} {last}"
+print(full)
