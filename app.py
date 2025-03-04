@@ -25,3 +25,12 @@ print(course_name.find("ro"))
 print(course_name.replace("p", "j"))
 print("pro" in course_name)
 print("test" not in course_name)
+
+# Numbers
+print(10 + 3)
+print(10 - 3)
+print(10 * 3)
+print(10 / 3)
+print(10 // 3)
+print(10 % 3)
+print(10 ** 3)
