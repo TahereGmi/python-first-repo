@@ -1,3 +1,5 @@
+import math
+
 print("Hello world!")
 print("*"*10)
 x = 1
@@ -34,3 +36,8 @@ print(10 / 3)
 print(10 // 3)
 print(10 % 3)
 print(10 ** 3)
+
+# Working with numbers
+print(round(2.8))
+print(abs(-2.4))
+print(math.ceil(3.2))
