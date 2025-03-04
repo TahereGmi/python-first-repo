@@ -41,3 +41,17 @@ print(10 ** 3)
 print(round(2.8))
 print(abs(-2.4))
 print(math.ceil(3.2))
+
+# Type conversion
+
+x = input("x: ")
+# y = x + 1
+# These 2 have different types and this expression have syntax error.
+print(type(x))  # This expression shows type string for x
+y = int(x) + 1  # Should convert x to int and return it as a int value.
+print(f"x: {x}, Y: {y}")
+
+# int(x)
+# float(x)
+# bool(x)
+# str(x)
