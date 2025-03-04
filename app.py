@@ -55,3 +55,17 @@ print(f"x: {x}, Y: {y}")
 # float(x)
 # bool(x)
 # str(x)
+fruit = "Apple"
+print(fruit[1:-1])
+
+
+# Conditional statements
+temperature = 35
+if temperature > 30:
+    print("It's Warm")
+    print("Drint water")
+elif temperature > 20:
+    print("It's nice")
+else:
+    print("It's cold")
+print('Done')
