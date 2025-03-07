@@ -85,3 +85,10 @@ if (high_income or good_credit) and not student:
     print("Eligable")
 else:
     print("Not eligable")
+
+# Short circuit evaluation
+# If one of theme are False, python interperetor stop evaluation:
+# *******if high_income and good_credit and not student
+#  If one of them are True, python interpretor stop evaluation.
+# It checks first vraible, if it's false then next, until finds True value, then stops evaluation
+# ******* if high_income or good_credit or not student
