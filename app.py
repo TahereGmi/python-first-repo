@@ -99,3 +99,8 @@ age = 22
 # if age >= 18 and age < 65: can write like bellow:
 if 18 <= age < 65:
     print("Eligable")
+
+# For loops
+# from 1 to 10 with 2 step
+for number in range(1, 10, 2):
+    print("Attempt", number, number * ".")
