@@ -114,3 +114,19 @@ for number in range(3):
         break
 else:
     print("Attempted 3 times and failed!")
+
+# Iterables
+# for x in range(4) => range is iterable (Tekrar pazir)
+# for x in "Python" => strings could be iterable
+# for x in [1,2,3] => lists could be iterable
+
+# While loops
+number = 100
+while number > 0:
+    print(number)
+    number //= 2
+
+command = ""
+while command.lower() != "quit":
+    command = input(">")
+    print("Echo", command)
