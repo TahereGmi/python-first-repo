@@ -177,3 +177,29 @@ def increment_by_default(number, by=2):
 
 
 print(increment_by_default(2))
+# Point: All the optional parameters should come after required parameters
+
+# xargs => *numbers => data structure in python: tuple
+
+
+# => this structure (*numbers) is tuple. you can iterate on it.
+def multiply(*numbers):
+    total = 1
+    for number in numbers:
+        total *= number
+    return total
+
+
+print(multiply(2, 3, 4, 5))
+
+# xxargs => **users => data structure in puthon is dictionary
+
+# => this structure (*numbers) is dictionary. you can access to items by its key.
+
+
+def save_user(**user):
+    print(user)
+    print(user["id"])
+
+
+save_user(id=1, name="Tahereh", job="developer")
