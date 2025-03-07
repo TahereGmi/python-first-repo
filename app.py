@@ -72,5 +72,16 @@ print('Done')
 
 # Ternary Operator
 age = 13
-message = "Elligable" if age >= 18 else "Not elligable"
+message = "Eligable" if age >= 18 else "Not eligable"
 print(message)
+
+# Logical Operators
+# and, or, not
+high_income = True
+good_credit = True
+student = False
+
+if (high_income or good_credit) and not student:
+    print("Eligable")
+else:
+    print("Not eligable")
