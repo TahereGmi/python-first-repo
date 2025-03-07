@@ -203,3 +203,36 @@ def save_user(**user):
 
 
 save_user(id=1, name="Tahereh", job="developer")
+
+# Scope
+message = "a"
+
+
+def greet(name):
+    message = "b"
+
+
+greet("Tahereh")
+# These 2 messages are different. First one is global, and second one is local.
+print(message)
+
+# Fizzbuzz Function
+# 1 - divisible by 3 -> fizz
+# 2 - divisible by 5 -> buzz
+# 3 - divisible by 3 and 5 -> fizzbuzz
+# 4 - not divisible by 3 or 5 -> return just number
+
+
+def fizz_buzz(input):
+    divided_to_three = input % 3 == 0
+    divided_by_five = input % 5 == 0
+    if divided_to_three and divided_by_five:
+        return "fizzBuzz"
+    if divided_to_three:
+        return "fizz"
+    if divided_by_five:
+        return "buzz"
+    return input
+
+
+print(fizz_buzz(45))
