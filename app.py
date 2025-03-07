@@ -69,3 +69,8 @@ elif temperature > 20:
 else:
     print("It's cold")
 print('Done')
+
+# Ternary Operator
+age = 13
+message = "Elligable" if age >= 18 else "Not elligable"
+print(message)
