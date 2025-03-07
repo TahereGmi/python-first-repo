@@ -148,8 +148,23 @@ print(f"We have {counter} even numbers!")
 # Functions
 
 
-def greeting():
+def greeting(first_name, last_name):
     print("My first function")
+    print(f"{first_name} {last_name}")
 
 
-greeting()
+greeting("Tahereh", "Gholami")
+
+# 2 types of function:
+# 1- Perform a task
+# 2- Return a value
+
+# Keyword argument: when our function have multiple arguments use if for make more clear
+# example:
+
+
+def increment(number, by):
+    return number + by
+
+
+print(increment(2, by=3))  # using keyword argument
