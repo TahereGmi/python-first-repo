@@ -92,3 +92,10 @@ else:
 #  If one of them are True, python interpretor stop evaluation.
 # It checks first vraible, if it's false then next, until finds True value, then stops evaluation
 # ******* if high_income or good_credit or not student
+
+# Chaining comparison oparators
+# Expression: age should be between 18 and 65
+age = 22
+# if age >= 18 and age < 65: can write like bellow:
+if 18 <= age < 65:
+    print("Eligable")
