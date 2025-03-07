@@ -44,12 +44,12 @@ print(math.ceil(3.2))
 
 # Type conversion
 
-x = input("x: ")
-# y = x + 1
-# These 2 have different types and this expression have syntax error.
-print(type(x))  # This expression shows type string for x
-y = int(x) + 1  # Should convert x to int and return it as a int value.
-print(f"x: {x}, Y: {y}")
+# x = input("x: ")
+# # y = x + 1
+# # These 2 have different types and this expression have syntax error.
+# print(type(x))  # This expression shows type string for x
+# y = int(x) + 1  # Should convert x to int and return it as a int value.
+# print(f"x: {x}, Y: {y}")
 
 # int(x)
 # float(x)
@@ -121,12 +121,26 @@ else:
 # for x in [1,2,3] => lists could be iterable
 
 # While loops
-number = 100
-while number > 0:
-    print(number)
-    number //= 2
+# number = 100
+# while number > 0:
+#     print(number)
+#     number //= 2
 
-command = ""
-while command.lower() != "quit":
-    command = input(">")
-    print("Echo", command)
+# command = ""
+# while command.lower() != "quit":
+#     command = input(">")
+#     print("Echo", command)
+
+counter = 0
+# number = 0
+# while number < 10:
+#     number += 2
+#     counter += 1
+#     print(number)
+#     if number == 8:
+#         print(f"We have {counter} even numbers!")
+for number in range(1, 10):
+    if number % 2 == 0:
+        print(number)
+        counter += 1
+print(f"We have {counter} even numbers!")
