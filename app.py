@@ -104,3 +104,13 @@ if 18 <= age < 65:
 # from 1 to 10 with 2 step
 for number in range(1, 10, 2):
     print("Attempt", number, number * ".")
+
+# For ... Else
+successful = False
+for number in range(3):
+    print("Attempt")
+    if successful:
+        print("Successful")
+        break
+else:
+    print("Attempted 3 times and failed!")
