@@ -144,3 +144,12 @@ for number in range(1, 10):
         print(number)
         counter += 1
 print(f"We have {counter} even numbers!")
+
+# Functions
+
+
+def greeting():
+    print("My first function")
+
+
+greeting()
