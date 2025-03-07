@@ -168,3 +168,12 @@ def increment(number, by):
 
 
 print(increment(2, by=3))  # using keyword argument
+# Default argument
+# If you dont add second argument, the function has default argument
+
+
+def increment_by_default(number, by=2):
+    return number + by
+
+
+print(increment_by_default(2))
