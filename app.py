@@ -242,3 +242,20 @@ print(fizz_buzz(45))
 numbers = list(range(20))
 print(numbers[::2])  # Print even numbers
 print(numbers[::-1])  # Print reversed list
+
+numbers1 = [1, 2, 3]
+# Unpacking list - the numbers of items in the list should be equal to the items unpacked
+frist, second, third = numbers1
+print(frist, second, third)
+
+numbers2 = [1, 2, 3, 4, 4, 4, 4, 4]
+# Packing list - Use *other for the rest of items
+# Python with using * packes all the elements
+first1, second1, *other = numbers2
+
+print(first1, other)
+
+# enumerate - The enumerate() function returns an enumerate object, which is an iterator.
+# To see the pairs, you can convert it into a list or tuple:
+fruits = ['apple', 'bannana', 'peach']
+print(list(enumerate(fruits)))
