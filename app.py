@@ -258,4 +258,23 @@ print(first1, other)
 # enumerate - The enumerate() function returns an enumerate object, which is an iterator.
 # To see the pairs, you can convert it into a list or tuple:
 fruits = ['apple', 'bannana', 'peach']
-print(list(enumerate(fruits)))
+# print(list(enumerate(fruits)))
+
+# Add or Remove data from list
+# Add item to the end of the list
+letters = ['a', 'b', 'c']
+letters.append('d')
+# Add in specific position
+letters.insert(0, '-')
+# Remove
+# Remove item from the end of the list
+# letters.pop()
+# If you pass the index, that index will remove
+letters.pop(1)
+# First accurate "b" will remove.
+# letters.remove("b")
+# Remove a range of data
+del letters[0:2]
+# Clean the whole list
+letters.clear()
+# print('letters', letters)
