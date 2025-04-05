@@ -236,3 +236,9 @@ def fizz_buzz(input):
 
 
 print(fizz_buzz(45))
+
+# Data structures
+# Lists
+numbers = list(range(20))
+print(numbers[::2])  # Print even numbers
+print(numbers[::-1])  # Print reversed list
