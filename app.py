@@ -379,3 +379,11 @@ if not queue:
 # x, y, x = point
 # if 10 in point:
 #     print("exists")
+
+# Swapping variables:
+x = 10
+y = 11
+# ** just one line:
+x, y = y, x
+# On the right side its a tuple. It exact equals to:
+# x, y = (11, 10)  -> x, y extract from this tuple
