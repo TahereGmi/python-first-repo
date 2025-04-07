@@ -278,3 +278,12 @@ del letters[0:2]
 # Clean the whole list
 letters.clear()
 # print('letters', letters)
+
+# Fining items
+chars = ['a', 'b', 'c', 'd']
+print(chars.index('b'))
+# If there is no 'd' in chars, this expression will return error.
+# print(chars.index('d'))
+# To prevent the error let check the chars:
+if 'd' in chars:
+    print(chars.index('d'))
