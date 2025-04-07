@@ -412,3 +412,18 @@ numbers = array("i", [1, 2, 3])
 # If you wan to access items with index you must use list, or:
 # if 1 in first:
 #     print("Yes")
+
+# Dictionaries data structure
+# Python doesn’t have “objects” in the same sense as JavaScript
+# It just has dictionaries for key-value storage (and classes for OOP-style objects).
+# - Built-in key-value storage.
+# - Keys must be hashable (strings, numbers, tuples, etc).
+point = dict(x=1, y=2)  # -> {"x":1, "y":2}
+print(point["x"])
+point["z"] = 20
+print(point.get("a", 0))  # if "a" exist it returns and if not returns 0
+del point["x"]
+# for key in point:
+#     print(key, point[key])
+for key, value in point.items():
+    print(key, value)
