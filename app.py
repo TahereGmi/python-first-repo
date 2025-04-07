@@ -394,3 +394,21 @@ x, y = y, x
 numbers = array("i", [1, 2, 3])
 # This line cause an error because this array onle must have integer -> typecode
 # numbers[0] = 1.0
+
+# Sets
+# Make lists items unique
+# **** rnumbers = [1, 1, 2, 3, 4]
+# uniques = set(rnumbers)
+# print("uniques:", uniques)
+# print("unique len:", len(uniques))
+# **** first = set(numbers)
+# **** second = {1, 5}
+# print(first | second) -> both sets items: {1,2,3,4,5}
+# print(first & second) -> just common items: {1}
+# print(first - second) -> {2,3,4}
+# print(first ^ seconf) -> items are either in the first or second sets but not both: {2,3,4,5}
+# Sets unlike lists are unordered collection. It means sets are not in sequence so we can not access them using an index.
+# print(first[0]) -> error
+# If you wan to access items with index you must use list, or:
+# if 1 in first:
+#     print("Yes")
