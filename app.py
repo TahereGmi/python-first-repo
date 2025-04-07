@@ -1,3 +1,4 @@
+from collections import deque
 import math
 
 print("Hello world!")
@@ -337,12 +338,44 @@ list1 = [1, 2, 3]
 list2 = [10, 20, 30]
 print(list(zip(list1, list2)))
 
-# Stacks -> example: browser history
+# Stacks: LIFO behavior -> example: browser history
 browsing_session = []
 # next page
 browsing_session.append(1)
 # back to previus page
 browsing_session.pop()
 # We use inex negative to get item on top of the stack
+# browsing_session[-1]
 if not browsing_session:
-    browsing_session[-1]
+    print("disbale")
+
+# Queues: FIFO
+queue = deque([])
+queue.append(1)
+queue.append(2)
+queue.append(3)
+# this function is not in lists
+queue.popleft()
+print(queue)
+if not queue:
+    print("Empty")
+
+# Tuples
+# creating tuples:
+# point = (1, 2)
+# point = 1,2
+# point = 1,
+# point = () -> empty tuple
+# Concat 2 tuples:
+# point = (1, 2) + (2, 3) -> (1,2,2,3)
+# Repeat the tuple:
+# point = (1, 2) * 3 -> (1,2,1,2,1,2)
+# Convert a list to tuple -> using tuple fn:
+# point = tuple([1,2]) -> (1,2)
+# point = tuple("Hello") -> ("H", "e", "l", "l", "o")
+# Get index of item or range of items:
+# point = (1, 2, 3)
+# print(point[0:2])
+# x, y, x = point
+# if 10 in point:
+#     print("exists")
