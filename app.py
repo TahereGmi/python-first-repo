@@ -436,5 +436,7 @@ for key, value in point.items():
 # values = {x: x*2 for x in range(5)}  -> this returns a dictionary expression
 # values = (x*2 for x in range(5)) -> this returns a generator expression
 # print(values)
+
+# Generator expressions -> constant size for how many size data
 values = (x*2 for x in range(10))
 print("gen:", getsizeof(values))
