@@ -431,6 +431,6 @@ for key, value in point.items():
 
 # Dictionary comprehensions
 # {expression for item in items}
-values = {x*2 for x in range(5)}  # this is a set
-values = {x: x*2 for x in range(5)}  # this is a dictionary
-print(values)
+# values = {x*2 for x in range(5)}  ->  this is a set
+# values = {x: x*2 for x in range(5)}  -> this is a dictionary
+# print(values)
