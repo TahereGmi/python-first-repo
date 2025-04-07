@@ -317,8 +317,16 @@ print(tupleItems)
 
 # Map function -> 2 arguments -> lambda func and iterables -> It returns a map object
 prices = list(map(lambda item: item[1], tupleItems))
-print('maped prices:', prices)
+# print('maped prices:', prices)
 
 # Filter function -> 2 rguments -> func and iterables -> It returns a filter object
 filtered = list(filter(lambda item: item[1] >= 10, tupleItems))
+# print('filtered prices', filtered)
+
+# List Comprehension -> [expression for item in items]
+# Replace line 319
+prices = [item[1] for item in tupleItems]
+print('maped prices:', prices)
+# Replace line 323
+filtered = [item for item in tupleItems if item[1] >= 10]
 print('filtered prices', filtered)
