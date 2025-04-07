@@ -304,7 +304,7 @@ print(numberss)
 # Ex: List of tuples -> Python doesnt know about sorting tuples
 tupleItems = [
     ("Pro1", 10),
-    ("Pro2", 23),
+    ("Pro2", 9),
     ("Pro3", 12)
 ]
 # def sort_item(item):
@@ -315,6 +315,10 @@ tupleItems = [
 tupleItems.sort(key=lambda item: item[1])
 print(tupleItems)
 
-# Map function -> got 2 paratmeters -> lambda func and iterables -> It returns a map object
+# Map function -> 2 arguments -> lambda func and iterables -> It returns a map object
 prices = list(map(lambda item: item[1], tupleItems))
 print('maped prices:', prices)
+
+# Filter function -> 2 rguments -> func and iterables -> It returns a filter object
+filtered = list(filter(lambda item: item[1] >= 10, tupleItems))
+print('filtered prices', filtered)
