@@ -1,3 +1,4 @@
+from array import array
 from collections import deque
 import math
 
@@ -387,3 +388,9 @@ y = 11
 x, y = y, x
 # On the right side its a tuple. It exact equals to:
 # x, y = (11, 10)  -> x, y extract from this tuple
+
+# Array -> If you are dealing with a large secuense number use arrays So dont solve the problem that doesnt exist.
+# array(typecode, ...) -> you have to set the typecode -> google it
+numbers = array("i", [1, 2, 3])
+# This line cause an error because this array onle must have integer -> typecode
+# numbers[0] = 1.0
