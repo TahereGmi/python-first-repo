@@ -440,3 +440,21 @@ for key, value in point.items():
 # Generator expressions -> constant size for how many size data
 values = (x*2 for x in range(10))
 print("gen:", getsizeof(values))
+
+
+# Unpacking operator
+snumber = [1, 2, 3]
+print(*snumber)  # using * unpacking the list
+values = [*range(5), *"Hello"]
+print("unpacked values:", values)
+first = [1, 2]
+second = [3]
+combined = [*first, "a", *second]
+print("combined values:", combined)
+# Unpack dictionary
+first = {"x": 1}
+second = {"x": 10, "y": 2}
+combined = {**first, **second}
+# Using 2 stars (**) to unpacking as a key: value. with just one star (*) it will return just keys.
+# Also if there is repeated items in dictionaries, second one keeped.
+print("combined dictionaries:", combined)
