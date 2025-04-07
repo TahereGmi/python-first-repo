@@ -427,3 +427,10 @@ del point["x"]
 #     print(key, point[key])
 for key, value in point.items():
     print(key, value)
+
+
+# Dictionary comprehensions
+# {expression for item in items}
+values = {x*2 for x in range(5)}  # this is a set
+values = {x: x*2 for x in range(5)}  # this is a dictionary
+print(values)
