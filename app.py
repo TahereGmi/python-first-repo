@@ -314,3 +314,7 @@ tupleItems = [
 # using lambda fn instead of define "sort_item" (anonymous function)
 tupleItems.sort(key=lambda item: item[1])
 print(tupleItems)
+
+# Map function -> got 2 paratmeters -> lambda func and iterables -> It returns a map object
+prices = list(map(lambda item: item[1], tupleItems))
+print('maped prices:', prices)
