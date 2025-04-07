@@ -330,3 +330,9 @@ print('maped prices:', prices)
 # Replace line 323
 filtered = [item for item in tupleItems if item[1] >= 10]
 print('filtered prices', filtered)
+
+# Zip function -> multiple arguments -> if it has 2 arguments It creates a list of tuples, where each tuple has one element from each iterable.
+# We wanna combine these two list
+list1 = [1, 2, 3]
+list2 = [10, 20, 30]
+print(list(zip(list1, list2)))
