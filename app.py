@@ -307,11 +307,10 @@ tupleItems = [
     ("Pro2", 23),
     ("Pro3", 12)
 ]
+# def sort_item(item):
+#     return item[1]
+# tupleItems.sort(key=sort_item)
 
-
-def sort_item(item):
-    return item[1]
-
-
-tupleItems.sort(key=sort_item)
+# using lambda fn instead of define "sort_item" (anonymous function)
+tupleItems.sort(key=lambda item: item[1])
 print(tupleItems)
