@@ -1,3 +1,4 @@
+from sys import getsizeof
 from array import array
 from collections import deque
 import math
@@ -431,6 +432,9 @@ for key, value in point.items():
 
 # Dictionary comprehensions
 # {expression for item in items}
-# values = {x*2 for x in range(5)}  ->  this is a set
-# values = {x: x*2 for x in range(5)}  -> this is a dictionary
+# values = {x*2 for x in range(5)}  ->  this returns a set expression
+# values = {x: x*2 for x in range(5)}  -> this returns a dictionary expression
+# values = (x*2 for x in range(5)) -> this returns a generator expression
 # print(values)
+values = (x*2 for x in range(10))
+print("gen:", getsizeof(values))
