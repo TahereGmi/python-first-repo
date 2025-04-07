@@ -287,5 +287,31 @@ print(chars.index("b"))
 # To prevent the error let check the chars:
 if 'd' in chars:
     print(chars.index("d"))
-# Count of an item => if > 0 there is atleast 1 item
+# Count of an item => if > 0 there is atleast 1 item in list
 print(letters.count("d"))
+
+# Sortings stings and numbers
+numberss = [3, 51, 4, 8, 23]
+# Sort
+# numberss.sort()
+# It will reverse list and modified the original list
+# numberss.sort(reverse=True)
+# There is a built in function -> sorted()
+# It would never change the list
+print(sorted(numberss, reverse=True))
+print(numberss)
+# Sorting list of complex objects
+# Ex: List of tuples -> Python doesnt know about sorting tuples
+tupleItems = [
+    ("Pro1", 10),
+    ("Pro2", 23),
+    ("Pro3", 12)
+]
+
+
+def sort_item(item):
+    return item[1]
+
+
+tupleItems.sort(key=sort_item)
+print(tupleItems)
