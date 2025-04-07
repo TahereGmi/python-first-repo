@@ -336,3 +336,13 @@ print('filtered prices', filtered)
 list1 = [1, 2, 3]
 list2 = [10, 20, 30]
 print(list(zip(list1, list2)))
+
+# Stacks -> example: browser history
+browsing_session = []
+# next page
+browsing_session.append(1)
+# back to previus page
+browsing_session.pop()
+# We use inex negative to get item on top of the stack
+if not browsing_session:
+    browsing_session[-1]
