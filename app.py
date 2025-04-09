@@ -456,5 +456,5 @@ first = {"x": 1}
 second = {"x": 10, "y": 2}
 combined = {**first, **second}
 # Using 2 stars (**) to unpacking as a key: value. with just one star (*) it will return just keys.
-# Also if there is repeated items in dictionaries, second one keeped.
+# Also if there is repeated items in dictionaries, last value will use.
 print("combined dictionaries:", combined)
