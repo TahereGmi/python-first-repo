@@ -67,6 +67,8 @@ def calculate_xfactor(age):
 # At this line programe will crash
 # calculate_xfactor(-1)
 # Implement in try and add except, it will not crash
+# Raising exception has cost, if you are budingl large scale apps, be careful to use it.
+# if you can handle situations with simple if statements, do it
 try:
     calculate_xfactor(-1)
 except ValueError as err:
