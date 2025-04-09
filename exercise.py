@@ -33,7 +33,41 @@ except ValueError as ex:
 # When no exception
 else:
     print("No exceptions were thrown.")
-print("Execution continues.")
 
 # There would be different exceptions with same msg,
 # we can write them like this -> except (ValueError, ZeroDivisionError):
+
+# there are times we need to work with external resources like files, newtwork connections, data bases, ...
+# whenever we use these resources, after we have done, we need to relase that.
+# For example: when we open the file, we should close it after we have done.
+# try:
+#     file = open("app.py")
+#     age = int(input("Age: "))
+#     xfactore = 10 / age
+    # If above line throws an exception this line never execute
+    # file.close()
+# except (ValueError, ZeroDivisionError):
+#     print("You didn't enter a valid age.")
+# else:
+#     print("No exceptions were thrown.")
+# # Always executed
+# finally:
+#     file.close()
+
+# Built-in exceptions -> you can google it
+# Raising exceptions
+
+
+def calculate_xfactor(age):
+    if age <= 0:
+        raise ValueError("Age cannot be 0 or less")
+    return 10 / age
+
+
+# At this line programe will crash
+# calculate_xfactor(-1)
+# Implement in try and add except, it will not crash
+try:
+    calculate_xfactor(-1)
+except ValueError as err:
+    print(err)
