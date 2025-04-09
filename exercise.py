@@ -34,3 +34,6 @@ except ValueError as ex:
 else:
     print("No exceptions were thrown.")
 print("Execution continues.")
+
+# There would be different exceptions with same msg,
+# we can write them like this -> except (ValueError, ZeroDivisionError):
