@@ -522,6 +522,9 @@ except ValueError as err:
 
 
 class Point:
+    defaul_color = "red"
+    # Contrsutor
+
     def __init__(self, x, y):
         self.x = x
         self.y = y
@@ -533,3 +536,9 @@ class Point:
 point = Point(1, 2)
 print(isinstance(point, Point))  # -> True
 point.draw()
+# Class attributes shared across all the instanses.
+print(Point.defaul_color)
+print(point.defaul_color)
+# If you change the class attribute, the change is visible in all the instances
+Point.defaul_color = "yellow"
+# print(point.defaul_color) -> yellow
