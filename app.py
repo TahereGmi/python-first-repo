@@ -522,11 +522,14 @@ except ValueError as err:
 
 
 class Point:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
     def draw(self):
-        print("Draw")
+        print(f"Draw point ({self.x}, {self.y})")
 
 
-point = Point()
-# point.draw()
-print(type(point))
+point = Point(1, 2)
 print(isinstance(point, Point))  # -> True
+point.draw()
