@@ -584,3 +584,28 @@ point.draw()
 # Python automatically calls these methods behind the scenes when certain operations happen.
 # You don't call them directly — Python does it for you.
 # To see all the magic methods, google it.
+
+# Comparing 2 objects:
+
+
+class Point1:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
+    # If we dont have this method, python compare 2 instances by refrence.
+    def __eq__(self, other):
+        return self.x == other.x and self.y == other.y
+
+    def __gt__(self, other):
+        return self.x > other.x and self.y > other.y
+
+    # instance method
+    def draw(self):
+        print(f"Point ({self.x}, {self.y})")
+
+
+point = Point1(2, 4)
+other = Point1(1, 2)
+# print(point == other)
+print(point > other)
