@@ -583,3 +583,4 @@ point.draw()
 # They’re used to customize how your objects behave — for example, when you print them, compare them, or use built-in functions on them.
 # Python automatically calls these methods behind the scenes when certain operations happen.
 # You don't call them directly — Python does it for you.
+# To see all the magic methods, google it.
