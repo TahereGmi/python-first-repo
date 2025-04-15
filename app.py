@@ -576,3 +576,10 @@ class Point:
 
 point = Point.zero()  # -> Factory method
 point.draw()
+
+# Magic methods:
+# also called dunder methods for “double underscore”) are special methods that start and end with two underscores like:
+# __init__, __str__, __len__, __add__, __eq__, etc.
+# They’re used to customize how your objects behave — for example, when you print them, compare them, or use built-in functions on them.
+# Python automatically calls these methods behind the scenes when certain operations happen.
+# You don't call them directly — Python does it for you.
