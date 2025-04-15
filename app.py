@@ -533,12 +533,46 @@ class Point:
         print(f"Draw point ({self.x}, {self.y})")
 
 
-point = Point(1, 2)
-print(isinstance(point, Point))  # -> True
-point.draw()
+# point = Point(1, 2)
+# print(isinstance(point, Point))  # -> True
+# point.draw()
 # Class attributes shared across all the instanses.
-print(Point.defaul_color)
-print(point.defaul_color)
+# print(Point.defaul_color)
+# print(point.defaul_color)
 # If you change the class attribute, the change is visible in all the instances
-Point.defaul_color = "yellow"
+# Point.defaul_color = "yellow"
 # print(point.defaul_color) -> yellow
+
+# ****** class vs instance method *******
+# @classmethod is a tool.
+# - A method that belongs to the class, not the instance.
+# - First parameter is cls, not self.
+# - You can use it to create alternative constructors.
+# >>>>>> Factory method -> This pattern is common when:
+# - A design pattern used to encapsulate object creation logic
+# - Often returns instances of subclasses or configures the object.
+# - In Python, it’s commonly implemented as a @classmethod.
+# - You want to access or modify class-level state,
+# - Without needing to create an object.
+
+# A factory method is a special kind of classmethod,
+# but a classmethod could just be any method tied to the class instead of an instance —
+# it might return a number, config, or log something.
+# It's not a factory unless it's creating instances
+
+class Point:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
+    @classmethod
+    def zero(cls):
+        return cls(0, 0)  # -> equal to Point(0,0) -> Factory method
+
+    # instance method
+    def draw(self):
+        print(f"Point ({self.x}, {self.y})")
+
+
+point = Point.zero()  # -> Factory method
+point.draw()
