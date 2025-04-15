@@ -593,16 +593,12 @@ class Point1:
         self.x = x
         self.y = y
 
-    # If we dont have this method, python compare 2 instances by refrence.
+    # If we dont have this method, by default this equality operator (==) compares addresss or references of these 2 object in memory.
     def __eq__(self, other):
         return self.x == other.x and self.y == other.y
 
     def __gt__(self, other):
         return self.x > other.x and self.y > other.y
-
-    # instance method
-    def draw(self):
-        print(f"Point ({self.x}, {self.y})")
 
 
 point = Point1(2, 4)
