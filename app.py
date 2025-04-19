@@ -622,3 +622,50 @@ p1 = Point2(10, 11)
 p2 = Point2(2, 3)
 combined = p1 + p2
 # print(combined.x) # ->12
+
+# ********* Making custom containers **********
+# While Python’s built-in containers (list, dict, set, etc.)
+# cover most common use cases, sometimes you’ll need custom containers when:
+# 1.You want to enforce specific behavior or rules:
+# - A list that only allows integers.
+# - A dictionary that automatically converts all keys to lowercase.
+# 2.You want to add extra features or logic:
+# - Logging when items are added/removed.
+# - Automatically saving to a file when updated.
+# - Lazy loading data on access.
+# 3.You want to mimic or extend built-in types
+# - Acts like a list, but is backed by a database.
+# - Feels like a dictionary, but fetches keys from an API.
+# 4.For clean code and reuse in large projects
+# If you have a common pattern—like a list that tracks history
+# or a set with expiration—you can put it in a custom container and reuse it.
+
+
+class TagClouds:
+    def __init__(self):
+        self.tags = {}
+
+    def __add__(self, tag):
+        self.tags[tag.lower()] = self.tags.get(tag, 0) + 1
+
+    def __getitem__(self, tag):
+        return self.tags.get(tag.lower(), 0)
+
+    def __setitem__(self, tag, count):
+        self.tags[tag.lower()] = count
+
+    def __len__(self):
+        return len(self.tags)
+
+    def __iter__(self):
+        return iter(self.tags)
+
+
+cloud = TagClouds()
+# getItem, setItem
+cloud["Python"] = 10
+# add
+cloud.add("Python")
+cloud.add("python")
+# len
+len(cloud)
