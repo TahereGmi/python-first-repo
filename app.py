@@ -604,4 +604,21 @@ class Point1:
 point = Point1(2, 4)
 other = Point1(1, 2)
 # print(point == other)
-print(point > other)
+# print(point > other)
+
+# Performing arithmetic operations:
+
+
+class Point2:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
+    def __add__(p1, p2):
+        return Point2(p1.x + p2.x, p1.y + p2.y)
+
+
+p1 = Point2(10, 11)
+p2 = Point2(2, 3)
+combined = p1 + p2
+# print(combined.x) # ->12
