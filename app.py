@@ -669,3 +669,6 @@ cloud.add("Python")
 cloud.add("python")
 # len
 len(cloud)
+
+# **** When you define something with two leading underscores,
+# like __count, Python will "mangle" the name to prevent accidental access *****
