@@ -644,6 +644,8 @@ combined = p1 + p2
 class TagClouds:
     def __init__(self):
         self.tags = {}
+        # Private member
+        self.__counts = []
 
     def __add__(self, tag):
         self.tags[tag.lower()] = self.tags.get(tag, 0) + 1
@@ -672,3 +674,9 @@ len(cloud)
 
 # **** When you define something with two leading underscores,
 # like __count, Python will "mangle" the name to prevent accidental access *****
+
+# ****** Private Members ******
+# We can make certian attributes or certain classess private, If we prefix them with __, they are considered private.
+# How you can access them?
+# __dict__ -> holds all the attributes on this class
+print(cloud.__dict__)
