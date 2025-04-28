@@ -647,7 +647,7 @@ class TagClouds:
         # Private member
         self.__counts = []
 
-    def __add__(self, tag):
+    def add(self, tag):
         self.tags[tag.lower()] = self.tags.get(tag, 0) + 1
 
     def __getitem__(self, tag):
