@@ -680,3 +680,5 @@ len(cloud)
 # How you can access them?
 # __dict__ -> holds all the attributes on this class
 print(cloud.__dict__)
+# You can access this private memmber:
+print(cloud._TagClouds__counts)
