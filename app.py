@@ -682,3 +682,46 @@ len(cloud)
 print(cloud.__dict__)
 # You can access this private memmber:
 print(cloud._TagClouds__counts)
+
+# ******** Properties *********
+# A property lets you use a method like a variable.
+
+# So instead of calling a method like this:
+# person.get_name() -> person.name
+# But behind the scenes, it’s still calling a method! 
+# This is useful when you want to run some code when ** getting or setting ** a value, like checking if the value is valid.
+
+# Basic example
+class Person:
+    def __init__(self, name):
+        self._name = name
+
+    @property
+    def name(self):  # This runs when you do person.name
+        print("Getting name...")
+        return self._name
+
+    @name.setter
+    def name(self, value):  # This runs when you do person.name = "New Name"
+        print("Setting name...")
+        if not isinstance(value, str):
+            raise ValueError("Name must be a string")
+        self._name = value
+
+# usage
+p = Person("Alice")
+
+print(p.name)      # ➜ Getting name... ➜ Alice
+
+p.name = "Bob"     # ➜ Setting name...
+
+p.name = 123       # ❌ Error: Name must be a string
+
+# Why use it?
+# You want to protect your data (e.g., check it before saving)
+# You want to compute a value instead of storing it
+# You want to hide internal logic
+# Remember:
+# @property → makes a method act like a variable
+# @name.setter → runs when you change the value
+# @name.deleter (optional) → runs when you delete it
