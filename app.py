@@ -715,7 +715,7 @@ print(p.name)      # ➜ Getting name... ➜ Alice
 
 p.name = "Bob"     # ➜ Setting name...
 
-p.name = 123       # ❌ Error: Name must be a string
+# p.name = 123       # Error: Name must be a string
 
 # Why use it?
 # You want to protect your data (e.g., check it before saving)
@@ -725,3 +725,23 @@ p.name = 123       # ❌ Error: Name must be a string
 # @property → makes a method act like a variable
 # @name.setter → runs when you change the value
 # @name.deleter (optional) → runs when you delete it
+
+
+# Inheritance
+class Animal():
+    def __init__(self):
+        self.age = 1
+    def eat(self):
+        print("Eat")
+
+# Animal: Parent, Base
+# Mammal: Child, sub
+class Mammal(Animal):
+    def walk(self):
+        print("Walk")
+    
+class Fish(Animal):
+    def swim(self):
+        print("Swim")
+m = Mammal()
+m.eat() # -> Inherited from Animal class
