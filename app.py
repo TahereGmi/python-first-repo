@@ -727,16 +727,20 @@ p.name = "Bob"     # ➜ Setting name...
 # @name.deleter (optional) → runs when you delete it
 
 
-# Inheritance
+# ************ Inheritance
 class Animal():
     def __init__(self):
         self.age = 1
+        print("Animal contructor!")
     def eat(self):
         print("Eat")
 
 # Animal: Parent, Base
 # Mammal: Child, sub
 class Mammal(Animal):
+    def __init__(self):
+        self.weight = 2
+        super().__init__() # --> add Animal class contructor to this class
     def walk(self):
         print("Walk")
     
@@ -745,3 +749,20 @@ class Fish(Animal):
         print("Swim")
 m = Mammal()
 m.eat() # -> Inherited from Animal class
+
+# print(isinstance(m, Animal)) #-> True
+# ** There is a base class (built in class) for all the classes in python -> object class
+# print(isinstance(m, object)) #-> True
+# o = object() #-> An empty object
+# ** There is another built in class -> issubclass
+# print(issubclass(Mammal, Animal)) #-> True
+# print(issubclass(Mammal, object)) #-> True
+
+# ************* Method Overriding
+# When a class inherit from other, the contructor of class replaces to base class one. -> line 742
+
+# *** AVOID USING INHERITANCE MULTI-LEVEL, MORE THAN 1-2 LEVEL TO PREVENT MORE COMPLEXITY ****
+
+
+
+
