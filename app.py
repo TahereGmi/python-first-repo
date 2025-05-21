@@ -825,3 +825,38 @@ def draw(controls):
 ddl = DropDownList()
 textbox = TextBox()
 draw([ddl, textbox])
+
+# *********** Duck Typing
+# Duck typing in Python is a concept related to dynamic typing, 
+# where the type or class of an object is less important than the methods and properties it defines. The idea comes from the saying:
+# "If it looks like a duck, swims like a duck, and quacks like a duck, 
+# then it probably is a duck."
+
+# In programming terms, this means:
+# If an object implements the methods or behaviors you're expecting, 
+# you can use it—regardless of its actual type.
+class Duck:
+    def quack(self):
+        print("Quack!")
+
+class Person:
+    def quack(self):
+        print("I'm pretending to be a duck!")
+
+def make_it_quack(thing):
+    thing.quack()
+
+duck = Duck()
+person = Person()
+
+make_it_quack(duck)    # Output: Quack!
+make_it_quack(person)  # Output: I'm pretending to be a duck!
+
+# In the example above, the make_it_quack function doesn't care whether the object is actually a Duck. 
+# It just cares that the object has a quack() method.
+# Benefits:
+# Flexibility: You don't need to define strict class hierarchies or interfaces.
+# Less boilerplate: Code is more concise and adaptable.
+# Risks:
+# Runtime errors: If the expected method doesn't exist, Python will raise an AttributeError.
+# Harder to debug: It may be less obvious where something went wrong.
