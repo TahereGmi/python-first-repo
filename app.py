@@ -764,5 +764,46 @@ m.eat() # -> Inherited from Animal class
 # *** AVOID USING INHERITANCE MULTI-LEVEL, MORE THAN 1-2 LEVEL TO PREVENT MORE COMPLEXITY ****
 
 
+# *********** Multiple Inheritence ***********
+# There is no common mudule between classes
+# If there is common mudoles it causes some problems
+class Flyer():
+    def fly(self):
+        pass
+class Swimmer():
+    def swim(self):
+        pass
+class FishFlyer(Flyer, Swimmer):
+    pass
+
+# A good example and introducing abstract class:
+from abc import ABC, abstractmethod
+class InvalidOperationError(Exception):
+    pass
+class Stream(ABC):
+    def __init__(self):
+        self.opened = False
+    
+    def open(self):
+        if self.opened:
+            raise InvalidOperationError("Stream is already open.")
+        self.opened = True
+
+    def close(self):
+        if not self.opened:
+            raise InvalidOperationError("Stream is already closed.")
+        self.opened = False
+    @abstractmethod
+    def read(self):
+        pass
+
+class FileStream(Stream):
+    def read(self):
+        print("File Stream")
+
+class NetworkStream(Stream):
+    def read(self):
+        print("Memory Stream")
+
 
 
