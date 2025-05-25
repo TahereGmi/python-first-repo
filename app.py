@@ -860,3 +860,54 @@ make_it_quack(person)  # Output: I'm pretending to be a duck!
 # Risks:
 # Runtime errors: If the expected method doesn't exist, Python will raise an AttributeError.
 # Harder to debug: It may be less obvious where something went wrong.
+
+# ********************** Extending built-in types
+# Extending built-in types means creating a custom class that inherits from a built-in type like list, dict, str, etc., 
+# and then adding or modifying behavior.
+# 🎯 Why Would You Extend a Built-in Type?
+# You might want to:
+# Add custom methods to a built-in type.
+# Override default behavior (e.g., how sorting works).
+# Enforce validation or constraints on data.
+# Create more readable and reusable code in specific domains.
+# example:
+class IntList(list):
+    def append(self, item):
+        if not isinstance(item, int):
+            raise ValueError("Only integers are allowed")
+        super().append(item)
+
+# Usage
+my_list = IntList()
+my_list.append(5)
+my_list.append(10)
+print(my_list)  # Output: [5, 10]
+
+# my_list.append("hello")  # Raises ValueError: Only integers are allowed
+
+# ************** Data classes ***************
+class Point:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+    
+p1 = Point(1,2)
+p2 = Point(1,2)
+# print(p1 == p2) => False
+# Since p1 and p2 are two separate instances of Point with the same content 
+# but different memory locations, p1 == p2 will return False.
+#** NOW:
+# For comparing 2 points not their memory location, we should have this magic method:
+def __eq__(self, other):
+        return self.x == other.x and self.y == other.y
+
+# Then p1 == p2 would return True, because the content (x and y) is compared.
+# SOOO --> print(p1 == p2) => True
+
+# If you wanna class without any method and just having data, better use ** namedtuple ** instead:
+from collections import namedtuple
+Point1 = namedtuple("Point", ["x", "y"])
+p1 = Point1(x=1, y=2)
+p2 = Point1(x=1, y=2)
+# print(p1 == p2) => True -> very easy and simple and less code
+# namedtuple is * immutable * it means after defining them you cant modify them.
