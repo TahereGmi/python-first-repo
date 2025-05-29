@@ -938,6 +938,6 @@ p2 = Point1(x=1, y=2)
 # ******** Mpdule search path
 # print(sys.path)
 
-from ecommerce import sales
+from ecommerce.shopping import sales
 
 sales.calc_shipping()
