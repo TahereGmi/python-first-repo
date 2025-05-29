@@ -935,9 +935,19 @@ p2 = Point1(x=1, y=2)
 # calc_shipping()
 # calc_tax()
 
-# ******** Mpdule search path
+# *********** Mpdule search path
 # print(sys.path)
 
 from ecommerce.shopping import sales
 
 sales.calc_shipping()
+
+# ************ The dir function ************
+# dir() is a built-in Python function that:
+# Lists the names (identifiers) in the current scope (if called without arguments).
+# Lists the names (attributes, methods) of an object (if called with an argument).
+# It’s often used to explore what’s available in a module, object, or even the global/local scope.
+# If no argument is passed, dir() lists names in the current scope.
+# If an object is passed (like a module, class, or instance), 
+# it lists the attributes and methods of that object.
+print(dir(sales))
