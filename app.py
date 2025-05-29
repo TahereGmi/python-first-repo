@@ -926,9 +926,18 @@ p2 = Point1(x=1, y=2)
 
 # 2 type import:
 # - Import specific objects of that module:
-# -> from sales import calc_tax, calc_shipping
+# from sales import calc_tax, calc_shipping
 # - Import entire object
-# -> import sales
+# import sales
+# import sys
 # *** Usage
 # sales.calc_shipping()
 # calc_shipping()
+# calc_tax()
+
+# ******** Mpdule search path
+# print(sys.path)
+
+from ecommerce import sales
+
+sales.calc_shipping()
