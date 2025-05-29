@@ -911,3 +911,24 @@ p1 = Point1(x=1, y=2)
 p2 = Point1(x=1, y=2)
 # print(p1 == p2) => True -> very easy and simple and less code
 # namedtuple is * immutable * it means after defining them you cant modify them.
+
+
+# ************** importing modules **************
+# Modules help you organize code into manageable sections. 
+# Instead of writing all your code in one big file, 
+# you can split it into modules, 
+# each focusing on a specific piece of functionality. Example: Suppermarket
+# *** Here’s why modules are important:
+# - Organization – Break your code into logical, manageable files.
+# - Reusability – Use modules across multiple projects or scripts.
+# - Namespace Separation – Avoid naming conflicts by having different modules with their own namespaces.
+# - Maintainability – Easier to debug, test, and understand smaller pieces of code.
+
+# 2 type import:
+# - Import specific objects of that module:
+# -> from sales import calc_tax, calc_shipping
+# - Import entire object
+# -> import sales
+# *** Usage
+# sales.calc_shipping()
+# calc_shipping()
