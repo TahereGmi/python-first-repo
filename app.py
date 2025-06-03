@@ -965,3 +965,31 @@ print(path.suffix)
 print(path.parent)
 path = path.with_suffix(".txt")
 print(path)
+
+# ************ Working with Directories ************
+# iterdir() is a method from Python’s pathlib module that allows you to iterate over the contents of a directory. 
+# It yields Path objects for each entry (file or directory) in the specified path.
+# It’s a modern and object-oriented way to work with filesystem paths, 
+# replacing older modules like os and glob.
+# example
+# p = Path('your_directory')
+# for entry in p.iterdir():
+#     print(entry)
+
+# Working with timestamps
+# In Python, time.time() returns the current time in seconds since the Epoch, 
+# as a floating-point number.
+# Epoch: This is usually January 1, 1970, 00:00:00 UTC.
+# This value is mainly used for:
+# - Measuring durations (e.g., elapsed time between two points)
+# - Timestamps for logs or files
+# Example:
+import time
+def send_emails():
+ for i in range(1000):
+    pass
+start = time.time()
+send_emails()
+end = time.time()
+duration = end - start
+print(duration)
