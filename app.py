@@ -993,3 +993,19 @@ send_emails()
 end = time.time()
 duration = end - start
 print(duration)
+
+
+#************** Generating random values **************
+import random
+import string
+
+print(random.random()) #-> a number from 0 - 1
+print(random.randint(1, 10)) #-> random int number from 1 - 10
+print(random.choice([1,2,3,4,5])) #-> random number choise from the array
+print(random.choices([1,2,3,4,5], k=2)) #-> array of 2 random numbers choise from the original array
+print(random.choices("sdedrsvfrsc", k=4)) #-> array of 4 random numbers choise from the original string
+nums = [1,2,3,4]
+random.shuffle(nums) #-> shuffle array items
+print('nums', nums)
+# creating a random pssword
+print("".join(random.choices(string.ascii_letters + string.digits , k=4)))
